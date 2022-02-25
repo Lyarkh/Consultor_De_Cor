@@ -2,7 +2,7 @@
 import requests
 from time import sleep
 
-class NomeDaCor:
+class ConsultorDeCor:
     def __init__(self, cor_em_hex):
         self.cor_em_hex = cor_em_hex
         print('Procurando o nome da cor...')
@@ -24,5 +24,5 @@ class NomeDaCor:
         request_da_cor = requests.get(url)
         dados_da_cor = request_da_cor.json()
 
-        nome_cor = dados_da_cor  # ['name']['value'] 
+        nome_cor = dados_da_cor['name']['value'] 
         return nome_cor
