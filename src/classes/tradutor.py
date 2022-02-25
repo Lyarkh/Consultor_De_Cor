@@ -50,5 +50,3 @@ if __name__ == "__main__":
     traduzir = Tradutor(texto)
     
     print(traduzir.traduzir(texto))
-
-    

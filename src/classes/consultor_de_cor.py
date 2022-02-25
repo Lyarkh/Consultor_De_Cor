@@ -5,7 +5,7 @@ from time import sleep
 class ConsultorDeCor:
     def __init__(self, cor_em_hex):
         self.cor_em_hex = cor_em_hex
-        print('Procurando o nome da cor...')
+        print('Procurando cor...')
         sleep(1.5)
         self.__nome_cor = self.busca_nome_da_cor_com_api(self.cor_em_hex)
     
@@ -26,3 +26,9 @@ class ConsultorDeCor:
 
         nome_cor = dados_da_cor['name']['value'] 
         return nome_cor
+
+if __name__ == "__main__":
+    cor =  '00BFFF'
+    nome_da_cor = ConsultorDeCor(cor)
+    print(nome_da_cor.nome)
+    print(nome_da_cor)
