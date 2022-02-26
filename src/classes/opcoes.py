@@ -2,7 +2,7 @@ from .classes_mae.template_opcao import TemplateOpcao
 from .classes_mae.voltar_menu import VoltarMenu
 from .carregando import Carregamento
 
-class Opcao01(TemplateOpcao, VoltarMenu):
+class Opcao01(TemplateOpcao, VoltarMenu): # Buscar cor por codigo rgb ou hexadecimal
 
     def run(self):
         print('esta funcionando a opção 01')
@@ -12,7 +12,7 @@ class Opcao01(TemplateOpcao, VoltarMenu):
     def muda_estado(self):
         return 1
 
-class Opcao02(TemplateOpcao,VoltarMenu):
+class Opcao02(TemplateOpcao,VoltarMenu): # Todas as informações referentes a cor
 
     def run(self):
         print('esta funcionando a opção 02')
@@ -22,7 +22,7 @@ class Opcao02(TemplateOpcao,VoltarMenu):
     def muda_estado(self):
         return 1
 
-class Opcao03(TemplateOpcao,VoltarMenu):
+class Opcao03(TemplateOpcao,VoltarMenu): # Schema da cor
 
     def run(self):
         print('esta funcionando a opção 03')
@@ -32,7 +32,7 @@ class Opcao03(TemplateOpcao,VoltarMenu):
     def muda_estado(self):
         return 1
 
-class Encerramento(TemplateOpcao):
+class Encerramento(TemplateOpcao): # Sair do programa
 
     def run(self):
         print('esta funcionando a opção 07')

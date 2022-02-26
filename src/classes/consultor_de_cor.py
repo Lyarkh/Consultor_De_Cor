@@ -14,7 +14,10 @@ class ConsultorDeCor:
         return self.__nome_cor
 
     def __str__(self):
-        return f'Nome da cor: {self.nome}'
+        return f'Nome da cor: {self.nome}' # Refatorar como será escrito, pois vai adicionar mais métodos
+
+    def request_da_cor(self): # Request padrão que será utilizado na maioria  dos métodos
+        pass
 
     def busca_nome_da_cor_com_api(self, cor_em_hexadecimal):
     # testando API para encontrar a cor com request
@@ -26,6 +29,12 @@ class ConsultorDeCor:
 
         nome_cor = dados_da_cor['name']['value'] 
         return nome_cor
+    
+    def schema_da_cor(self):
+        pass
+
+    def todas_informacoes_da_cor(self):
+        pass
 
 if __name__ == "__main__":
     cor =  '00BFFF'

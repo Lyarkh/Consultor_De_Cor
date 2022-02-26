@@ -6,14 +6,15 @@ from .opcoes import *
 
 class Menu:
     def __init__(self):
-        self.estado = 1 
+        self.estado = 1 # Condição no loop do menu para que ele continue rodando, 
+                        # mudando com a função "verificando_estado"
 
     @property
-    def lista_das_opcoes_disponiveis(self):
+    def lista_das_opcoes_disponiveis(self): # Aqui que é adicionado ou retirado as opções disponíveis para o menu
         lista_das_opcoes = [Opcao01(), Opcao02(), Opcao03(), Encerramento()]
 
         return lista_das_opcoes
-        
+    
     def run(self):
         self.apresenta_programa()
         sleep(0.8)
@@ -61,20 +62,24 @@ class Menu:
                 lista_opcoes[id].run()
                 self.estado = self.verificando_estado(lista_opcoes[id])
     
+    # tratando a opção inserida para que o programa não seja interrompido caso não a opção inserida
     def tratamento_opcao(self, opcao):
         lista_de_opcoes = self.lista_das_opcoes_disponiveis
         opcoes_aceitas = [str(posicao+1) for posicao in range(len(lista_de_opcoes))] 
+        print(opcoes_aceitas)
 
         if opcao in opcoes_aceitas:
             return int(opcao)
         else:
-            self.opcao_invalida()
+            self.opcao_invalida(opcoes_aceitas)
 
-    def opcao_invalida(self):
+    def opcao_invalida(self, opcoes):
+        quantidade_de_opcoes = len(opcoes)
+
         self.limpa_tela()
         print('│-------------------------------------------│   ')
         print('│         Digite uma opção válida           │   ')
-        print('│       São aceitas opções de 1 a 4         │   ')
+        print(f'│       São aceitas opções de 1 a {quantidade_de_opcoes}         │   ')
         print('│-------------------------------------------│   ')
         input('│Pressione qualquer tecla pra voltar ao menu│\n ')   
 
