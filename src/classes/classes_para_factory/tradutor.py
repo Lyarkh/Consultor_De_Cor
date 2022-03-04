@@ -42,6 +42,7 @@ class Tradutor:
 
 if __name__ == "__main__":
     texto = 'I love you'
-    traduzir = Tradutor(texto)
+    tradutor = Tradutor()
+    traduzir = tradutor.traduzir(texto)
     
-    print(traduzir.traduzir(texto))
+    print(traduzir)
