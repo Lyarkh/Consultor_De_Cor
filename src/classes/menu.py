@@ -66,7 +66,6 @@ class Menu:
     def tratamento_opcao(self, opcao):
         lista_de_opcoes = self.lista_das_opcoes_disponiveis
         opcoes_aceitas = [str(posicao+1) for posicao in range(len(lista_de_opcoes))] 
-        print(opcoes_aceitas)
 
         if opcao in opcoes_aceitas:
             return int(opcao)

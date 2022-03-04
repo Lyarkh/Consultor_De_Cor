@@ -8,6 +8,12 @@ class Principal:
         nome_da_cor = Fabrica().cria_consultor_de_cor(cor)
         print(nome_da_cor.nome)
         print(nome_da_cor)
+    
+    def teste_tradutor(self):
+        texto = "Testing translate"
+        tradutor = Fabrica().cria_tradutor()
+        palavra_traduzida = tradutor.traduzir(texto)
+        print(palavra_traduzida)
 
     def main(self):
         menu = Menu().run()
